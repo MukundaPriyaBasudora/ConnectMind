@@ -1,0 +1,211 @@
+:root {
+  --deep-blue: #1D4E89;
+  --vibrant-teal: #1ABC9C;
+  --coral: #FF6B6B;
+  --soft-gray-bg: #F5F6FA;
+  --medium-gray-text: #565656;
+  --white: #FFFFFF;
+  --shadow: rgba(0,0,0,0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--soft-gray-bg);
+  color: var(--medium-gray-text);
+  line-height: 1.6;
+  font-weight: 300;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--vibrant-teal);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--coral);
+  text-decoration: underline;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+
+header {
+  background-color: var(--white);
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: var(--deep-blue);
+  cursor: default;
+}
+
+nav a {
+  margin-left: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+nav a:first-child {
+  margin-left: 0;
+}
+
+nav a:hover {
+  color: var(--vibrant-teal);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--vibrant-teal) 0%, var(--deep-blue) 100%);
+  color: white;
+  padding: 120px 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero h2 {
+  font-weight: 600;
+  font-size:3rem;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.btn-primary {
+  background-color: var(--coral);
+  color: var(--white);
+  padding: 16px 48px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e25252;
+  box-shadow: 0 8px 20px rgba(226, 82, 82, 0.8);
+}
+
+.daily-quote {
+  background: transparent;
+  box-shadow: none;
+  color: var(--white);
+  margin: 40px 0 0 0;
+  font-size: 1.3rem;
+  border-radius: 0;
+  padding: 0;
+  font-style: italic;
+  text-align: center;
+  position: relative;
+  line-height: 1.4;
+}
+
+.daily-quote::before,
+.daily-quote::after {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.daily-quote .author {
+  color: var(--coral);
+  font-size: 1rem;
+  margin-top: 12px;
+}
+
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 36px;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 12px;
+}
+
+.feature-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 28px 24px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.feature-card h3 {
+  color: var(--deep-blue);
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: var(--medium-gray-text);
+  line-height: 1.5;
+}
+
+footer {
+  background-color: var(--deep-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 24px;
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-top: 80px;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    margin-top: 12px;
+    width: 100%;
+  }
+  nav a {
+    display: inline-block;
+    margin: 0 12px 0 0;
+    font-size: 0.95rem;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .btn-primary {
+    padding: 14px 36px;
+    font-size: 1rem;
+  }
+}
